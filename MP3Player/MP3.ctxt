@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MP3
+comment1.params=
+comment1.target=void\ start()
+comment2.params=
+comment2.target=void\ pause()
+comment3.params=
+comment3.target=void\ resume()
+comment4.params=
+comment4.target=void\ stop()
+numComments=5

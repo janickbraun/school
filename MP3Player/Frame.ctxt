@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Frame
+comment1.params=
+comment1.target=void\ create()
+comment2.params=e
+comment2.target=void\ shortActionPerformed(java.awt.event.MouseEvent)
+comment3.params=e
+comment3.target=void\ longActionPerformed(java.awt.event.MouseEvent)
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=
+comment5.target=java.lang.String\ getDescription()
+comment6.params=f
+comment6.target=boolean\ accept(java.io.File)
+comment7.params=text
+comment7.target=void\ setButtonText(java.lang.String)
+numComments=8

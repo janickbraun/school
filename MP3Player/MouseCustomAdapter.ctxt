@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=MouseCustomAdapter
+comment1.params=
+comment1.target=MouseCustomAdapter()
+comment2.params=delay
+comment2.target=MouseCustomAdapter(long)
+comment3.params=e
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=
+comment4.target=void\ run()
+comment5.params=e
+comment5.target=void\ mouseReleased(java.awt.event.MouseEvent)
+comment6.params=e
+comment6.target=void\ shortActionPerformed(java.awt.event.MouseEvent)
+comment7.params=e
+comment7.target=void\ longActionPerformed(java.awt.event.MouseEvent)
+numComments=8
