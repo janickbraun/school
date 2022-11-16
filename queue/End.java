@@ -44,4 +44,8 @@ public class End extends Listelement {
         return null;
     }
 
+    void printOwn() {
+        assert true;
+    }
+
 }
