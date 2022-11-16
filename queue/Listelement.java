@@ -9,4 +9,5 @@ public abstract class Listelement {
     abstract Listelement removeValue(String value);
     abstract Listelement insertSorted(Dataelement data);
     abstract Listelement get(int index, int totalLength);
+    abstract void printOwn();
 }
