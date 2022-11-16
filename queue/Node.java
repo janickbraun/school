@@ -37,9 +37,7 @@ public class Node extends Listelement {
     }
 
     Listelement get(int index, int totalLength) {
-        System.out.print(data.getKey());
         int finalIndex = Math.abs((getLength() - 1)-(totalLength - 1));
-        System.out.println(finalIndex);
 
         if(finalIndex == index) {
             return this;
@@ -89,5 +87,9 @@ public class Node extends Listelement {
     void printInformation() {
         data.printInformation();
         follower.printInformation();
+    }
+
+    void printOwn() {
+        data.printInformation();
     }
 }
