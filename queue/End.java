@@ -29,11 +29,11 @@ public class End extends Listelement {
     }
 
     Listelement insertSorted(Dataelement data) {
-        return null;
+        return insertBack(data);
     }
 
-    void insertBack(Dataelement data) {
-        assert true;
+    Listelement insertBack(Dataelement data) {
+        return new Node(data, this);
     }
 
     void removeDataelement() {

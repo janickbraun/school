@@ -25,7 +25,7 @@ public class List {
     }
 
     void insertBack(Dataelement data) {
-        start.insertBack(data);
+        start = start.insertBack(data);
     }
 
     void removeFront() {

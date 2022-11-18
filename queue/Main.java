@@ -6,7 +6,7 @@ public class Main {
         list.insertFront(new Patient("Julius"));
         list.insertFront(new Patient("Papa"));
         list.insertFront(new Patient("Mama"));
-        /*list.insertFront(new Song("We made it.", "T-low"));
+        list.insertFront(new Song("We made it.", "T-low"));
         list.printInformation();
         System.out.println(list.getLength());
         list.insertBack(new Patient("Papa"));
@@ -18,10 +18,10 @@ public class Main {
         list.insertFront(new Patient("AAAAnfaang"));
         list.removeBack();
         list.removeBack();
-        list.insertSorted(new Patient("ZZZZZ"));*/
+        list.insertSorted(new Patient("ZZZZZ"));
         System.out.println(list.getLength());
 
-        System.out.println(list.get(1));
+        list.get(3).printOwn();
 
         list.printInformation();
     }

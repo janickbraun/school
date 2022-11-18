@@ -28,12 +28,8 @@ public class Node extends Listelement {
     }
 
     Listelement removeBack() {
-        if (follower.isEnd()) {
-            return follower;
-        } else {
             follower = follower.removeBack();
-            return this;
-        }
+        return this;
     }
 
     Listelement get(int index, int totalLength) {
@@ -46,12 +42,9 @@ public class Node extends Listelement {
         }
     }
 
-    void insertBack(Dataelement data) {
-        if(follower.isEnd()){
-            follower = new Node(data, follower);
-        } else {
-            follower.insertBack(data);
-        }
+    Listelement insertBack(Dataelement data) {
+        follower = follower.insertBack(data);
+        return this;
     }
 
     Listelement removeValue(String value) {
@@ -67,11 +60,7 @@ public class Node extends Listelement {
         if (data.isKeyHigher(data.getKey())) {
             return new Node(data, this);
         } else {
-            if (follower.isEnd()) {
-                insertBack(data);
-            } else {
-                follower=follower.insertSorted(data);
-            }
+            follower=follower.insertSorted(data);
             return this;
         }
     }
