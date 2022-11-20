@@ -1,9 +1,9 @@
 public abstract class Listelement {
     abstract int getLength();
-    abstract void printInformation();
+    abstract void printInformation(int totalLength);
+    abstract Dataelement getData();
+    abstract void setFollower(Listelement follower);
     abstract Dataelement search(String value);
-    abstract boolean isEnd();
-    abstract Listelement removeBack();
     abstract Listelement getFollower();
     abstract Listelement insertBack(Dataelement data);
     abstract Listelement removeValue(String value);

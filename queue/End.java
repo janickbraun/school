@@ -3,17 +3,16 @@ public class End extends Listelement {
         return 0;
     }
 
-    void printInformation() {
-        //pass
+    void setFollower(Listelement follower) {
         assert true;
     }
 
-    boolean isEnd() {
-        return true;
+    void printInformation(int totalLength) {
+        assert true;
     }
 
-    Listelement removeBack() {
-        return this;
+    Dataelement getData() {
+        return null;
     }
 
     Listelement get(int index, int totalLength) {
@@ -21,7 +20,7 @@ public class End extends Listelement {
     }
 
     Listelement getFollower() {
-        return null;
+        return this;
     }
 
     Listelement removeValue(String value) {

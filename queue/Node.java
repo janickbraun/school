@@ -1,5 +1,5 @@
 public class Node extends Listelement {
-    Listelement follower;
+    public Listelement follower;
     Dataelement data;
 
     Node (Dataelement data, Listelement follower) {
@@ -25,11 +25,6 @@ public class Node extends Listelement {
         } else {
             return follower.search(value);
         }
-    }
-
-    Listelement removeBack() {
-            follower = follower.removeBack();
-        return this;
     }
 
     Listelement get(int index, int totalLength) {
@@ -65,17 +60,13 @@ public class Node extends Listelement {
         }
     }
 
-    boolean isEnd() {
-        return false;
-    }
-
     int getLength() {
         return follower.getLength() + 1;
     }
 
-    void printInformation() {
-        data.printInformation();
-        follower.printInformation();
+    void printInformation(int totalLength) {
+        System.out.print(Math.abs((getLength() - 1)-(totalLength - 1)) + " - "); data.printInformation();
+        follower.printInformation(totalLength);
     }
 
     void printOwn() {
