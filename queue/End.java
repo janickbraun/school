@@ -18,6 +18,11 @@ public class End extends Listelement {
     Listelement get(int index, int totalLength) {
         return null;
     }
+    
+    Listelement insertBeforeData(Dataelement data, String value) {
+        //insertBack(data);
+        return this;
+    }
 
     Listelement getFollower() {
         return this;
@@ -28,7 +33,7 @@ public class End extends Listelement {
     }
 
     Listelement insertSorted(Dataelement data) {
-        return insertBack(data);
+        return new Node(data, this);
     }
 
     Listelement insertBack(Dataelement data) {

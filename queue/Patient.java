@@ -15,7 +15,7 @@ public class Patient implements Dataelement
     }
 
     public boolean isKeyHigher(String value) {
-        return name.compareTo(value) > 0;
+        return name.compareToIgnoreCase(value) > 0;
     }
 
     public void printInformation() {

@@ -9,11 +9,12 @@ public class Main {
         list.insertBack(new Patient("A"));
         list.insertBack(new Patient("A"));
 
-        //TODO insert sorted
+        //TODO binarySearch
 
         list.printInformation();
-
-        list.sortLinear();
+        
+        list.searchBinary("F");
+        
 
         list.printInformation();
     }

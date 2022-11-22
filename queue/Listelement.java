@@ -10,4 +10,5 @@ public abstract class Listelement {
     abstract Listelement insertSorted(Dataelement data);
     abstract Listelement get(int index, int totalLength);
     abstract void printOwn();
+    abstract Listelement insertBeforeData(Dataelement data, String value);
 }

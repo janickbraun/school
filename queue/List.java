@@ -19,8 +19,12 @@ public class List {
     Dataelement search (String value) {
         return start.search(value);
     }
+    
+    void insertBeforeData(Dataelement data, String value) {
+        start = start.insertBeforeData(data, value);
+    }
 
-    void sortLinear() {
+    void sortBubble() {
         int moves = 1;
         while (moves != 0) {
             moves = 0;
@@ -44,6 +48,17 @@ public class List {
             }
         }
 
+    }
+    
+    void searchBinary(String value) {
+        sortBubble();
+        int start = getLength();
+        int index = (int) Math.ceil((double)start / 2) - 1;
+        if(get(index).getData().isKeyHigher(value)){
+            System.out.println("vorne");
+        } else {
+            System.out.println("hinten");
+        }
     }
 
     void removeBack() {

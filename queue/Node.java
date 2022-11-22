@@ -26,6 +26,21 @@ public class Node extends Listelement {
             return follower.search(value);
         }
     }
+    
+    Listelement insertBeforeData(Dataelement data, String value) {
+        if(follower.getData() != null) {
+            if(follower.getData().getKey() == value) {
+                Node node = new Node(data, follower);
+                this.follower = node;
+            } else {
+                follower = follower.insertBeforeData(data, value);
+            }
+        } else {
+            insertBack(data);
+        }
+        
+        return this;
+    }
 
     Listelement get(int index, int totalLength) {
         int finalIndex = Math.abs((getLength() - 1)-(totalLength - 1));
@@ -51,13 +66,14 @@ public class Node extends Listelement {
         }
     }
 
-    Listelement insertSorted(Dataelement data) {
-        if (data.isKeyHigher(data.getKey())) {
-            return new Node(data, this);
+    Listelement insertSorted(Dataelement dataa) {
+        if (data.isKeyHigher(dataa.getKey())) {
+            return new Node(dataa, this);
         } else {
-            follower=follower.insertSorted(data);
+            follower = follower.insertSorted(dataa);
             return this;
         }
+        
     }
 
     int getLength() {
