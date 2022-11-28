@@ -52,12 +52,23 @@ public class List {
     
     void searchBinary(String value) {
         sortBubble();
-        int start = getLength();
-        int index = (int) Math.ceil((double)start / 2) - 1;
-        if(get(index).getData().isKeyHigher(value)){
-            System.out.println("vorne");
-        } else {
-            System.out.println("hinten");
+        int left = 0;
+        int right = this.getLength() - 1;
+        boolean found = false;
+
+        while (left <= right && !found) {
+            int middle = (left + right) / 2;
+            if(value.compareToIgnoreCase(this.get(middle).getData().getKey()) < 0) {
+                right = middle - 1;
+            } else if (value.compareToIgnoreCase(this.get(middle).getData().getKey()) > 0) {
+                left = middle + 1;
+            } else {
+                this.get(middle).printOwn();
+                found = true;
+            }
+        }
+        if(!found) {
+            System.out.println(value +  " was not found in list!");
         }
     }
 
