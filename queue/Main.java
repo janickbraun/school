@@ -11,7 +11,17 @@ public class Main {
 
         list.sortBubble();
         list.printInformation();
-        
+
         list.searchBinary("A");
+
+        /*
+        Stack:
+        Stack stack = new Stack();
+        stack.push(new Patient("Kalle"));
+        stack.printInformation();
+        stack.pop();
+        stack.printInformation();
+         */
+
     }
 }
