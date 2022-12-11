@@ -1,18 +1,18 @@
 public class Stack {
-    List list;
+    List stack;
     Stack() {
-        list = new List();
+        stack = new List();
     }
 
     public void push(Dataelement data) {
-        list.insertBack(data);
+        stack.insertBack(data);
     }
 
     public void pop() {
-        list.removeBack();
+        stack.removeBack();
     }
 
     public void printInformation() {
-        list.printInformation();
+        stack.printInformation();
     }
 }
