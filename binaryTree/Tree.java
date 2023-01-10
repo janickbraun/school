@@ -1,5 +1,5 @@
 public class Tree {
-    Listelement root;
+    Treeelement root;
     Tree() {
         root = new End();
     }

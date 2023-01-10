@@ -1,6 +1,6 @@
-public class Node extends Listelement {
-    Listelement left;
-    Listelement right;
+public class Node extends Treeelement {
+    Treeelement left;
+    Treeelement right;
     Dataelement data;
     Node(Dataelement data) {
         this.left = new End();
@@ -8,11 +8,11 @@ public class Node extends Listelement {
         this.data = data;
     }
 
-    public void setLeft(Listelement left) {
+    public void setLeft(Treeelement left) {
         this.left = left;
     }
 
-    public void setRight(Listelement right) {
+    public void setRight(Treeelement right) {
         this.right = right;
     }
 
@@ -20,21 +20,31 @@ public class Node extends Listelement {
         this.data = data;
     }
 
-    Listelement getLeft() {
+    Dataelement getData() {
+        return data;
+    }
+
+    Treeelement getLeft() {
         return left;
     }
 
-    Listelement getRight() {
+    Treeelement getRight() {
         return right;
     }
 
-    void print() {
-        System.out.println(data.getValue());
-        left.print();
-        right.print();
+    public void print() {
+        print("", this, false);
     }
 
-    Listelement insert(Dataelement data) {
+    public void print(String prefix, Treeelement n, boolean isLeft) {
+        if (n.getData() != null) {
+            System.out.println (prefix + (isLeft ? "|-- " : "\\-- ") + n.getData().getValue());
+            print(prefix + (isLeft ? "|   " : "    "), n.getLeft(), true);
+            print(prefix + (isLeft ? "|   " : "    "), n.getRight(), false);
+        }
+    }
+
+    Treeelement insert(Dataelement data) {
         if(this.data.getValue().compareToIgnoreCase(data.getValue()) > 0) {
             setLeft(left.insert(data));
         } else {
@@ -42,4 +52,6 @@ public class Node extends Listelement {
         }
         return this;
     }
+
+
 }

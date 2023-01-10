@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
         Tree tree = new Tree();
-        tree.insert(new Patient("f"));
-        tree.insert(new Patient("a"));
-        tree.insert(new Patient("z"));
-        tree.insert(new Patient("zz"));
+
+        for(int i = 1; i <= 26; i++) {
+            tree.insert(new Patient(String.valueOf((char)(i + 64))));
+        }
+
         tree.print();
     }
 }

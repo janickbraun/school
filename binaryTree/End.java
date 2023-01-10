@@ -1,18 +1,26 @@
-public class End extends Listelement {
+public class End extends Treeelement {
 
-    Listelement getLeft() {
+    Treeelement getLeft() {
         return null;
     }
 
-    Listelement getRight() {
+    Treeelement getRight() {
         return null;
     }
 
-    void print() {
-        assert true;
-    }
-
-    Listelement insert(Dataelement data) {
+    Treeelement insert(Dataelement data) {
         return new Node(data);
+    }
+
+    Dataelement getData() {
+        return null;
+    }
+
+    public void print() {
+        print("", this, false);
+    }
+
+    public void print(String prefix, Treeelement n, boolean isLeft) {
+        assert true;
     }
 }
