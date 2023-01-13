@@ -42,12 +42,6 @@ public class Node extends Treeelement {
         return this.right;
     }
 
-    /*public void print() {
-        System.out.println(data.getValue());
-        left.print();
-        right.print();
-    } */
-
     public void print() {
         print("", this, false);
     }
@@ -68,6 +62,25 @@ public class Node extends Treeelement {
         } else {
             return right.search(value);
         }
+    }
+
+    public void preorder() {
+        System.out.print(data.getValue() + ", ");
+        left.preorder();
+        right.preorder();
+    }
+
+    public void postorder() {
+        left.preorder();
+        right.preorder();
+        System.out.print(data.getValue() + ", ");
+    }
+
+    public void inorder() {
+        left.preorder();
+        System.out.print(data.getValue() + ", ");
+        right.preorder();
+
     }
 
     public Treeelement insert(Dataelement data) {

@@ -14,6 +14,18 @@ public class End extends Treeelement {
         assert true;
     }
 
+    public void preorder() {
+        assert true;
+    }
+
+    public void inorder() {
+        assert true;
+    }
+
+    public void postorder() {
+        assert true;
+    }
+
     public Treeelement insert(Dataelement data) {
         return new Node(data);
     }

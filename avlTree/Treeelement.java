@@ -11,4 +11,8 @@ public abstract class Treeelement {
     abstract public void setRight(Treeelement node);
     abstract public void setHeight(int height);
     abstract public void setBalanceFactor(int factor);
+
+    abstract public void preorder();
+    abstract public void postorder();
+    abstract public void inorder();
 }
