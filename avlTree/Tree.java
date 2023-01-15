@@ -12,18 +12,6 @@ public class Tree {
         nodeCount++;
     }
 
-    public void preorder() {
-        root.preorder();
-    }
-
-    public void inorder() {
-        root.inorder();
-    }
-
-    public void postorder() {
-        root.postorder();
-    }
-
     public int getHeight() {
         return root.getHeight();
     }
@@ -38,6 +26,21 @@ public class Tree {
 
     public void print() {
         root.print();
+    }
+
+    public void inorder() {
+        root.inorder();
+        System.out.print("\n");
+    }
+
+    public void preorder() {
+        root.preorder();
+        System.out.print("\n");
+    }
+
+    public void postorder() {
+        root.postorder();
+        System.out.print("\n");
     }
 
     public void deleteAll() {

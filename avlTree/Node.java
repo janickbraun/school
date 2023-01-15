@@ -26,6 +26,25 @@ public class Node extends Treeelement {
     public void setBalanceFactor(int factor) {
         this.balanceFactor = factor;
     }
+
+    public void inorder() {
+        left.inorder();
+        System.out.print(data.getValue() + ", ");
+        right.inorder();
+    }
+
+    public void preorder() {
+        System.out.print(data.getValue() + ", ");
+        left.preorder();
+        right.preorder();
+    }
+
+    public void postorder() {
+        left.postorder();
+        right.postorder();
+        System.out.print(data.getValue() + ", ");
+    }
+
     public Dataelement getData() {
         return this.data;
     }
@@ -47,7 +66,7 @@ public class Node extends Treeelement {
     }
 
     public void print(String prefix, Treeelement n, boolean isLeft) {
-        if (n.getData() != null) {
+        if (n.getHeight() > 0) {
             System.out.println (prefix + (isLeft ? "|-- " : "\\-- ") + n.getData().getValue());
             print(prefix + (isLeft ? "|   " : "    "), n.getLeft(), true);
             print(prefix + (isLeft ? "|   " : "    "), n.getRight(), false);
@@ -62,25 +81,6 @@ public class Node extends Treeelement {
         } else {
             return right.search(value);
         }
-    }
-
-    public void preorder() {
-        System.out.print(data.getValue() + ", ");
-        left.preorder();
-        right.preorder();
-    }
-
-    public void postorder() {
-        left.preorder();
-        right.preorder();
-        System.out.print(data.getValue() + ", ");
-    }
-
-    public void inorder() {
-        left.preorder();
-        System.out.print(data.getValue() + ", ");
-        right.preorder();
-
     }
 
     public Treeelement insert(Dataelement data) {

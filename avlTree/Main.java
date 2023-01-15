@@ -6,16 +6,18 @@ public class Main {
             tree.insert(new Patient(String.valueOf((char)(i + 64))));
         }
 
-        System.out.println("Höhe: " + tree.getHeight());
-        System.out.println("Größe: " + tree.getSize());
+        System.out.print("Höhe: "); System.out.println(tree.getHeight());
+        System.out.print("Größe: "); System.out.println(tree.getSize());
 
         System.out.print("\n");
+
         tree.print();
+
         System.out.print("\n");
-        tree.preorder();
-        System.out.print("\n");
-        tree.postorder();
-        System.out.print("\n");
-        tree.inorder();
+
+        System.out.print("Preorder: "); tree.preorder();
+        System.out.print("Postorder: "); tree.postorder();
+        System.out.print("Inorder: "); tree.inorder();
+
     }
 }

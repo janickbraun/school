@@ -14,18 +14,6 @@ public class End extends Treeelement {
         assert true;
     }
 
-    public void preorder() {
-        assert true;
-    }
-
-    public void inorder() {
-        assert true;
-    }
-
-    public void postorder() {
-        assert true;
-    }
-
     public Treeelement insert(Dataelement data) {
         return new Node(data);
     }
@@ -50,4 +38,18 @@ public class End extends Treeelement {
     public void setRight(Treeelement node) {}
     public void setHeight(int height) {}
     public void setBalanceFactor(int factor) {}
+
+    public void inorder() {
+        assert true;
+    }
+
+    public void preorder() {
+        assert true;
+    }
+
+    public void postorder() {
+        assert true;
+    }
+
+
 }
