@@ -19,5 +19,7 @@ public class Main {
         System.out.print("Postorder: "); tree.postorder();
         System.out.print("Inorder: "); tree.inorder();
 
+        System.out.println("Search: " + tree.search("G").getData().getValue());
+
     }
 }
