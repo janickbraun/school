@@ -51,5 +51,20 @@ public class End extends Treeelement {
         assert true;
     }
 
+    public Treeelement deleteBad(String value) {
+        return this;
+    }
+
+    public Treeelement delete(String value) {
+        return this;
+    }
+
+    public Treeelement getMaxLeft(Treeelement node) {
+        return node;
+    }
+
+    public Treeelement getMinRight(Treeelement node) {
+        return node;
+    }
 
 }

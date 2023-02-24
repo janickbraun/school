@@ -48,6 +48,14 @@ public class Tree {
         nodeCount = 0;
     }
 
+    public void deleteBad(String value) {
+        root = root.deleteBad(value);
+    }
+
+    public void delete(String value) {
+        root = root.delete(value);
+    }
+
     Treeelement search(String value) {
         return root.search(value);
     }

@@ -14,4 +14,8 @@ public abstract class Treeelement {
     abstract public void inorder();
     abstract public void preorder();
     abstract public void postorder();
+    abstract public Treeelement deleteBad(String value);
+    abstract public Treeelement delete(String value);
+    abstract public Treeelement getMaxLeft(Treeelement node);
+    abstract public Treeelement getMinRight(Treeelement node);
 }

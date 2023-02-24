@@ -45,6 +45,55 @@ public class Node extends Treeelement {
         System.out.print(data.getValue() + ", ");
     }
 
+    public Treeelement deleteBad(String value) {
+        if(this.data.getValue().equals(value)) {
+            Treeelement maxLeft = left.getMaxLeft(this);
+            Treeelement minRight = right.getMinRight(this);
+            if(minRight != this) {
+                setData(minRight.getData());
+                right = right.deleteBad(data.getValue());
+            } else if(maxLeft != this) {
+                setData(maxLeft.getData());
+                left = left.deleteBad(data.getValue());
+            } else {
+                return new End();
+            }
+        } else if (this.data.getValue().compareToIgnoreCase(value) > 0) {
+            left = left.deleteBad(value);
+        } else {
+            right = right.deleteBad(value);
+        }
+        return this;
+    }
+
+    public Treeelement delete(String value) {
+        if(this.data.getValue().equals(value)) {
+            if(left.getClass() == this.getClass()) {
+                left.getMaxLeft(this).setRight(right);
+                return left;
+            } else if(right.getClass() == this.getClass()) {
+                right.getMinRight(this).setLeft(left);
+                return right;
+            } else {
+                return new End();
+            }
+        } else if (this.data.getValue().compareToIgnoreCase(value) > 0) {
+            left = left.delete(value);
+        } else {
+            right = right.delete(value);
+        }
+
+        return this;
+    }
+
+    public Treeelement getMaxLeft(Treeelement node) {
+        return right.getMaxLeft(this);
+    }
+
+    public Treeelement getMinRight(Treeelement node) {
+        return left.getMinRight(this);
+    }
+
     public Dataelement getData() {
         return this.data;
     }

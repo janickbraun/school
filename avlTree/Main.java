@@ -21,5 +21,11 @@ public class Main {
 
         System.out.println("Search: " + tree.search("G").getData().getValue());
 
+        //tree.deleteBad("P");
+
+        tree.delete("P");
+
+        tree.print();
+
     }
 }
